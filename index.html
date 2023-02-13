@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary
+
+    </title>
+</head>
+
+<body>
+    <h1>number binary</h1>
+
+    <input id="input" type="text">
+    <button id="button">Converter</button>
+    <div id="resultado"></div>
+</body>
+
+<script>
+
+    let button = document.getElementById("button")
+    let input = document.getElementById("input")
+
+    let permission = true
+
+    input.maxLength = 8;
+    input.addEventListener("input", (element) => {
+        let inputValue = element.target.value
+
+        for (let i = 0; i < inputValue.length; i++) {
+            if (inputValue[i] != "0" && inputValue[i] != "1") {
+                alert("algo deu errado")
+                inputValue.innerHTML = ""
+                permission = false
+                break
+            }
+            else {
+                permission = true
+            }
+        }
+    })
+
+    button.addEventListener("click", () => {
+
+        if (permission) {
+            let soma = 0;
+            let valor = input.value
+            let controle = 0;
+
+            for (let i = valor.length - 1; i > -1; i--) {
+                calculo = valor[controle] * Math.pow(2, i)
+                soma += calculo;
+                controle++;
+            }
+
+            let result = document.getElementById("resultado").innerHTML = soma
+        } else {
+            alert("voce ainda não retirou os numeros diferentes de '0' e '1'")
+        }
+
+    })
+
+
+</script>
+
+</html>
