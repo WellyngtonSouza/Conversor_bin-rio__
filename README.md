@@ -22,5 +22,6 @@ Esse desafio exige que o desenvolvedor que o implemente siga estas restrições:
 
 * O usuário pode inserir um número variável de dígitos binários
 
-# ideia 
+[demonstração](https://wellyngtonsouza.github.io/Conversor_bin-rio__/)
 
+[ideia](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md)
